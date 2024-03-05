@@ -1,0 +1,475 @@
+/* yhteiset */
+
+body {color:black;
+    background-color: white;
+    margin: 0;}
+
+p {font-family: 'Outfit';
+    padding: 1%;
+    margin-left: 2%;
+    overflow: hidden;}
+
+h1, h2, h3, h4, h5 {font-family: 'Unbounded';
+                    display: block;
+                    padding: 1%;
+                    margin-left: 2%;}
+
+header {color: black;
+        background-color: #F1E6DA;
+        font-family: 'Unbounded';}
+
+footer {color: black;
+        background-color: #F1E6DA;}
+
+a {
+    text-decoration: none;
+}
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100px; /* Vie koko näytön korkeuden */
+
+    }
+    .vasen-yla {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px; /* Määrittele kuvan leveys */
+        height: auto; /* Säilytä alkuperäinen kuvasuhde */
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+    .oikea-yla {
+        position: absolute;
+        top: 45px;
+        right: 40px;
+        z-index: 1000; /* Määrittelee kerroksen, jotta se näkyy muiden elementtien päällä */
+        font-size: 24px; /* Määrittelee kuvakkeen koon */
+    }
+
+    .lang-menu {
+        position: absolute;
+        top: 25px;
+        right: 110px;
+        font-size: 15px;
+    }
+
+    .lang-fi {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        transition: transform 0.2s;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .lang-fi:hover {
+        transform: translateY(-5px);
+    }
+
+    .lang-gb {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        transition: transform 0.2s;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .lang-gb:hover {
+        transform: translateY(-5px);
+    }
+
+    .lang-ro {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        transition: transform 0.2s;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .lang-ro:hover {
+        transform: translateY(-5px);
+    }
+
+    .navbar {
+        align-items: center;
+    }
+
+    .navbar ul{
+        list-style-type: none;
+        background-color: #F1E6DA;
+        padding: 5px;
+        margin: 0px;
+        overflow: hidden;
+        display: absolute;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar a{
+        color: black;
+        background-color: white;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+        font-size: small;
+        border-radius: 20px 20px;
+        transition: transform 0.2s;
+    }
+
+    .navbar a:hover{
+        background-color: black;
+        color: white;
+        border-radius: 20px 20px;
+        transform: scale(1.1);
+    }
+
+    .navbar li{
+        float: left;
+    }
+
+    #mainMenu {
+        display: none;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 20px;
+        color: white;
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .text-overlay h2 {
+        margin-bottom: 10px;
+    }
+    
+    .text-overlay h2 {
+        margin-bottom: 10px;
+        font-size: auto;
+    }    
+
+    .image-text-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .tianshu-liu {
+        position: relative;
+    }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.vierityskuvat {
+    display: flex;
+    overflow-x: auto; /* Horisontaalinen vieritys */
+    width: auto;
+    
+}
+
+.bar {
+    flex: 0 0 auto;
+    width: 190px;
+    height: 230px; /* Muuta tarvittaessa */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-right: 10px; /* Lisää tarvittaessa väliä palkkien välille */
+    border-radius: 20px;
+    margin-left: 5%;
+}
+
+.bar:last-child {
+    margin-right: 0; /* Poista marginaali viimeiseltä palkilta */
+}
+
+.link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Unbounded";
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+    font-size: x-large;
+    transition: font-size 0.2s;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    
+}
+
+.palkki {
+    background-color: #CD2636;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    font-family: "Unbounded";
+    text-align: center;
+    display: block; /* Muutetaan ankkurit lohkoiksi */
+    text-decoration: none;
+    transition: transform 0.2s;
+    border-radius: 20px 20px;
+    }
+
+.palkki:hover {
+    background-color: black;
+        color: white;
+    transform:scale(1.1);
+}
+
+.etusivupalkki {
+    color: white;
+        background-color: black;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+        font-size: small;
+        border-radius: 20px 20px;
+        transition: transform 0.2s;
+        font-family: "Outfit";
+        width: 130px;
+}
+
+.etusivupalkki:hover {
+    background-color: #CD2636;
+        color: white;
+    transform:scale(1.1);
+}
+
+.etusivupalkki2 {
+    color: white;
+        background-color: black;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+        font-size: small;
+        border-radius: 20px 20px;
+        transition: transform 0.2s;
+        font-family: "Outfit";
+        width: 150px;
+        display: inline-block;
+}
+
+.etusivupalkki2:hover {
+    background-color: #CD2636;
+        color: white;
+    transform:scale(1.1);
+}
+
+/*mobiili*/
+
+@media only screen and (max-width:430px)
+    {
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .image-container2 {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+h3 {
+    margin-left: 5%;
+}
+
+    .footerlogo {
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+        margin-top: 5%;
+        margin-left: 2%;
+    }
+
+    .cteksti {
+        font-size: 70%;
+    }
+
+    .explorejapan {
+        font-size: 70%;
+    }
+
+    .kaupunkilista {
+        margin-left: 25%;
+        margin-top: 10%;
+    }
+
+    .yksityiskohtaisettiedot {
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .navbar ul{
+        display: absolute;
+    }
+    }
+
+/*keskikokoiset*/
+
+@media only screen and (min-width:431px)
+    {
+.flex_container {display:flex}
+.flex_item{
+    flex:1;
+    margin: 10px;
+    padding: 10px;}
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+       }
+
+       .kaupunkilista {
+        margin-left: 35%;
+    }
+
+    .yksityiskohtaisettiedot {
+        text-align: center;
+    }
+
+    .navbar ul{
+        display: flex;
+    }
+    }
+/*isot näytöt*/
+
+@media only screen and (min-width:1024px)
+
+    {
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+            float: left;
+            flex: 0 0 auto;
+            margin-right: 20px; /* Lisää tarvittaessa väliä kuvan ja tekstin välille */
+        }
+
+        .image-container2 {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            flex: 0 0 auto;
+            font-size: xx-large;}
+
+        .container {
+            display: flex;
+            flex-wrap: nowrap; /* Estää rivikäärymistä */
+            overflow-x: auto;
+        }
+        
+        .content {
+            flex: 1;
+        }
+        
+        h3 {
+            clear: right;}
+
+        .vierityskuvat {
+            display: flex;
+            position: relative;
+            margin-left: 52%;
+        }
+
+        .suunnittelematka {
+            display: block;
+            margin-top: 25%;
+            
+        }
+
+        .suunnittelematka h3 {
+            margin-left: 3%;
+        }
+
+        .suunnittelematka p {
+            margin-left: 2%;
+        }
+
+        .flex_container {display:flex}
+        .flex_item{
+            flex:1;
+            margin: 10px;
+            padding: 10px;}
+
+       .palkki {
+            margin-left: 750px;
+        }
+
+        .footerlogo {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-top: 3%;
+            margin-left: 2%;
+        }
+
+        .kaupunkilista {
+            margin-left: 10%;
+
+        }
+
+        .matkakohteetotsikko {
+            width: 100%;
+            height: auto;
+            margin-top: 0%;
+        }
+
+        .yksityiskohtaisettiedot {
+            text-align: center;
+        }
+
+        .navbar ul{
+            display: flex;
+        }
+
+    }
+
+    p {font-size: large;}
