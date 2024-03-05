@@ -433,7 +433,10 @@ h3 {
             margin-left: 2%;
         }
 
-        .flex_container {display:flex}
+        .flex_container {
+            display:flex
+        }
+
         .flex_item{
             flex:1;
             margin: 10px;
